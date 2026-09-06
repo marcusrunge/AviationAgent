@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><RootNamespace>MarcusRunge.AviationAgent.OnnxRuntime</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntimeGenAI" />
+  </ItemGroup>
+</Project>

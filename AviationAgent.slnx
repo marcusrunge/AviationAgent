@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
+    <Project Path="src/MarcusRunge.AviationAgent.OnnxRuntime/MarcusRunge.AviationAgent.OnnxRuntime.csproj" />
+    <Project Path="src/MarcusRunge.AviationAgent.Console/MarcusRunge.AviationAgent.Console.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MarcusRunge.AviationAgent.Tests/MarcusRunge.AviationAgent.Tests.csproj" />
+  </Folder>
+</Solution>
