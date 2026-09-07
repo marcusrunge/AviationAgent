@@ -36,15 +36,17 @@ public sealed class AviationWeatherReportFormatterTests
     }
 
     [Fact]
-    public void Format_Taf_ReturnsRawTextUntilDeterministicTafParserExists()
+    public void Format_TafValidityFocus_UsesDeterministicTafFormatterAndPreservesRawReport()
     {
         const string rawText = "TAF ETHS 070500Z 0706/0806 CAVOK";
         AviationWeatherReport report = new(WeatherProduct.Taf, "ETHS", rawText, DateTimeOffset.UnixEpoch);
         AviationWeatherReportFormatter formatter = new();
 
-        FormattedWeatherReport result = formatter.Format(report, AgentFocus.Wind, CultureInfo.GetCultureInfo("de-DE"));
+        FormattedWeatherReport result = formatter.Format(report, AgentFocus.Validity, CultureInfo.GetCultureInfo("de-DE"));
 
-        Assert.Equal(rawText, result.FormattedText);
+        Assert.Contains("TAF ETHS", result.FormattedText);
+        Assert.Contains("Ausgabe 07 05:00 UTC", result.FormattedText);
+        Assert.Contains("Gültigkeit 07 06:00 UTC - 08 06:00 UTC", result.FormattedText);
         Assert.Equal(rawText, result.RawText);
     }
 }

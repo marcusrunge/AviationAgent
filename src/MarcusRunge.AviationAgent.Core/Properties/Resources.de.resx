@@ -4,67 +4,102 @@
   <resheader name="version"><value>2.0</value></resheader>
   <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
   <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
-  <data name="AgentActionGetMetar" xml:space="preserve"><value>Aktuelles METAR abrufen</value></data>
-  <data name="AgentActionGetTaf" xml:space="preserve"><value>TAF-Vorhersage abrufen</value></data>
-  <data name="AgentActionGetMetarAndTaf" xml:space="preserve"><value>METAR und TAF abrufen</value></data>
   <data name="AgentActionExplainPreviousResult" xml:space="preserve"><value>Vorheriges Ergebnis erklären</value></data>
   <data name="AgentActionFilterPreviousResult" xml:space="preserve"><value>Vorheriges Ergebnis filtern</value></data>
-  <data name="AgentActionUnsupportedOperationalDecision" xml:space="preserve"><value>Operative Entscheidung nicht unterstützt</value></data>
+  <data name="AgentActionGetMetar" xml:space="preserve"><value>Aktuelles METAR abrufen</value></data>
+  <data name="AgentActionGetMetarAndTaf" xml:space="preserve"><value>METAR und TAF abrufen</value></data>
+  <data name="AgentActionGetTaf" xml:space="preserve"><value>TAF-Vorhersage abrufen</value></data>
   <data name="AgentActionUnknown" xml:space="preserve"><value>Unbekannte Anfrage</value></data>
-  <data name="AgentFocusFull" xml:space="preserve"><value>Gesamtübersicht</value></data>
-  <data name="AgentFocusWind" xml:space="preserve"><value>Wind und Böen</value></data>
-  <data name="AgentFocusVisibility" xml:space="preserve"><value>Sichtweite</value></data>
-  <data name="AgentFocusClouds" xml:space="preserve"><value>Bewölkung</value></data>
-  <data name="AgentFocusWeather" xml:space="preserve"><value>Wettererscheinungen</value></data>
-  <data name="AgentFocusTemperature" xml:space="preserve"><value>Temperatur und Taupunkt</value></data>
-  <data name="AgentFocusPressure" xml:space="preserve"><value>Luftdruck</value></data>
-  <data name="AgentFocusValidity" xml:space="preserve"><value>Ausgabezeit und Gültigkeit</value></data>
+  <data name="AgentActionUnsupportedOperationalDecision" xml:space="preserve"><value>Operative Entscheidung nicht unterstützt</value></data>
   <data name="AgentFocusChanges" xml:space="preserve"><value>Änderungen und Entwicklung</value></data>
-  <data name="AgentFocusWorstConditions" xml:space="preserve"><value>Ungünstigste Bedingungen</value></data>
+  <data name="AgentFocusClouds" xml:space="preserve"><value>Bewölkung</value></data>
+  <data name="AgentFocusFull" xml:space="preserve"><value>Gesamtübersicht</value></data>
   <data name="AgentFocusNone" xml:space="preserve"><value>Kein Schwerpunkt</value></data>
-  <data name="WeatherProductMetar" xml:space="preserve"><value>METAR</value></data>
-  <data name="WeatherProductTaf" xml:space="preserve"><value>TAF</value></data>
-  <data name="MetarStation" xml:space="preserve"><value>Station: {0}</value></data>
-  <data name="MetarObservationTime" xml:space="preserve"><value>Beobachtung: Tag {0:00} um {1:00}:{2:00} UTC</value></data>
-  <data name="MetarWind" xml:space="preserve"><value>Wind: {0}</value></data>
-  <data name="MetarWindVariable" xml:space="preserve"><value>variable Richtung</value></data>
-  <data name="MetarWindDirection" xml:space="preserve"><value>aus {0}°</value></data>
-  <data name="MetarWindValue" xml:space="preserve"><value>{0} mit {1} kt</value></data>
-  <data name="MetarWindWithGusts" xml:space="preserve"><value>{0}, Böen bis {1} kt</value></data>
-  <data name="MetarVisibility" xml:space="preserve"><value>Sicht: {0}</value></data>
-  <data name="MetarVisibilityCavok" xml:space="preserve"><value>CAVOK, mindestens 10 km ohne signifikantes Wetter oder tiefe Bewölkung</value></data>
-  <data name="MetarVisibilityAtLeastTenKilometers" xml:space="preserve"><value>mindestens 10 km</value></data>
-  <data name="MetarVisibilityMeters" xml:space="preserve"><value>{0:N0} m</value></data>
-  <data name="MetarWeather" xml:space="preserve"><value>Wetter: {0}</value></data>
-  <data name="MetarWeatherNone" xml:space="preserve"><value>kein gemeldetes signifikantes Wetter</value></data>
-  <data name="MetarWeatherLight" xml:space="preserve"><value>leicht</value></data>
-  <data name="MetarWeatherHeavy" xml:space="preserve"><value>stark</value></data>
-  <data name="MetarWeatherRain" xml:space="preserve"><value>Regen</value></data>
-  <data name="MetarWeatherSnow" xml:space="preserve"><value>Schnee</value></data>
-  <data name="MetarWeatherDrizzle" xml:space="preserve"><value>Nieselregen</value></data>
-  <data name="MetarWeatherMist" xml:space="preserve"><value>feuchter Dunst</value></data>
-  <data name="MetarWeatherFog" xml:space="preserve"><value>Nebel</value></data>
-  <data name="MetarWeatherThunderstorm" xml:space="preserve"><value>Gewitter</value></data>
-  <data name="MetarWeatherHail" xml:space="preserve"><value>Hagel</value></data>
-  <data name="MetarWeatherSmallHail" xml:space="preserve"><value>Graupel</value></data>
-  <data name="MetarWeatherHaze" xml:space="preserve"><value>trockener Dunst</value></data>
-  <data name="MetarClouds" xml:space="preserve"><value>Wolken: {0}</value></data>
-  <data name="MetarCloudsUnavailable" xml:space="preserve"><value>nicht gemeldet</value></data>
+  <data name="AgentFocusPressure" xml:space="preserve"><value>Luftdruck</value></data>
+  <data name="AgentFocusTemperature" xml:space="preserve"><value>Temperatur und Taupunkt</value></data>
+  <data name="AgentFocusValidity" xml:space="preserve"><value>Ausgabezeit und Gültigkeit</value></data>
+  <data name="AgentFocusVisibility" xml:space="preserve"><value>Sichtweite</value></data>
+  <data name="AgentFocusWeather" xml:space="preserve"><value>Wettererscheinungen</value></data>
+  <data name="AgentFocusWind" xml:space="preserve"><value>Wind und Böen</value></data>
+  <data name="AgentFocusWorstConditions" xml:space="preserve"><value>Ungünstigste Bedingungen</value></data>
+  <data name="MetarCloudAmountBKN" xml:space="preserve"><value>durchbrochen</value></data>
+  <data name="MetarCloudAmountCLR" xml:space="preserve"><value>klar</value></data>
+  <data name="MetarCloudAmountFEW" xml:space="preserve"><value>gering bewölkt</value></data>
+  <data name="MetarCloudAmountNCD" xml:space="preserve"><value>keine Wolken erkannt</value></data>
+  <data name="MetarCloudAmountNSC" xml:space="preserve"><value>keine signifikanten Wolken</value></data>
+  <data name="MetarCloudAmountOVC" xml:space="preserve"><value>bedeckt</value></data>
+  <data name="MetarCloudAmountSCT" xml:space="preserve"><value>aufgelockert</value></data>
+  <data name="MetarCloudAmountSKC" xml:space="preserve"><value>wolkenlos</value></data>
+  <data name="MetarCloudAmountVV" xml:space="preserve"><value>Vertikalsicht</value></data>
   <data name="MetarCloudLayer" xml:space="preserve"><value>{0} in {1:N0} ft AGL</value></data>
   <data name="MetarCloudLayerWithType" xml:space="preserve"><value>{0}, Typ {1}</value></data>
-  <data name="MetarCloudAmountFEW" xml:space="preserve"><value>gering bewölkt</value></data>
-  <data name="MetarCloudAmountSCT" xml:space="preserve"><value>aufgelockert</value></data>
-  <data name="MetarCloudAmountBKN" xml:space="preserve"><value>durchbrochen</value></data>
-  <data name="MetarCloudAmountOVC" xml:space="preserve"><value>bedeckt</value></data>
-  <data name="MetarCloudAmountVV" xml:space="preserve"><value>Vertikalsicht</value></data>
-  <data name="MetarCloudAmountNSC" xml:space="preserve"><value>keine signifikanten Wolken</value></data>
-  <data name="MetarCloudAmountNCD" xml:space="preserve"><value>keine Wolken erkannt</value></data>
-  <data name="MetarCloudAmountSKC" xml:space="preserve"><value>wolkenlos</value></data>
-  <data name="MetarCloudAmountCLR" xml:space="preserve"><value>klar</value></data>
-  <data name="MetarTemperature" xml:space="preserve"><value>Temperatur: {0}; Taupunkt: {1}</value></data>
+  <data name="MetarClouds" xml:space="preserve"><value>Wolken: {0}</value></data>
+  <data name="MetarCloudsUnavailable" xml:space="preserve"><value>nicht gemeldet</value></data>
   <data name="MetarDegreesCelsius" xml:space="preserve"><value>{0} °C</value></data>
+  <data name="MetarNoChangeInformation" xml:space="preserve"><value>Aus der dekodierten METAR-Meldung werden keine Änderungsinformationen abgeleitet.</value></data>
+  <data name="MetarObservationTime" xml:space="preserve"><value>Beobachtung: Tag {0:00} um {1:00}:{2:00} UTC</value></data>
   <data name="MetarPressure" xml:space="preserve"><value>QNH: {0}</value></data>
   <data name="MetarPressureHectopascals" xml:space="preserve"><value>{0} hPa</value></data>
+  <data name="MetarStation" xml:space="preserve"><value>Station: {0}</value></data>
+  <data name="MetarTemperature" xml:space="preserve"><value>Temperatur: {0}; Taupunkt: {1}</value></data>
   <data name="MetarValueUnavailable" xml:space="preserve"><value>nicht verfügbar</value></data>
-  <data name="MetarNoChangeInformation" xml:space="preserve"><value>Aus der dekodierten METAR-Meldung werden keine Änderungsinformationen abgeleitet.</value></data>
+  <data name="MetarVisibility" xml:space="preserve"><value>Sicht: {0}</value></data>
+  <data name="MetarVisibilityAtLeastTenKilometers" xml:space="preserve"><value>mindestens 10 km</value></data>
+  <data name="MetarVisibilityCavok" xml:space="preserve"><value>CAVOK, mindestens 10 km ohne signifikantes Wetter oder tiefe Bewölkung</value></data>
+  <data name="MetarVisibilityMeters" xml:space="preserve"><value>{0:N0} m</value></data>
+  <data name="MetarWeather" xml:space="preserve"><value>Wetter: {0}</value></data>
+  <data name="MetarWeatherDrizzle" xml:space="preserve"><value>Nieselregen</value></data>
+  <data name="MetarWeatherFog" xml:space="preserve"><value>Nebel</value></data>
+  <data name="MetarWeatherHail" xml:space="preserve"><value>Hagel</value></data>
+  <data name="MetarWeatherHaze" xml:space="preserve"><value>trockener Dunst</value></data>
+  <data name="MetarWeatherHeavy" xml:space="preserve"><value>stark</value></data>
+  <data name="MetarWeatherLight" xml:space="preserve"><value>leicht</value></data>
+  <data name="MetarWeatherMist" xml:space="preserve"><value>feuchter Dunst</value></data>
+  <data name="MetarWeatherNone" xml:space="preserve"><value>kein gemeldetes signifikantes Wetter</value></data>
+  <data name="MetarWeatherRain" xml:space="preserve"><value>Regen</value></data>
+  <data name="MetarWeatherSmallHail" xml:space="preserve"><value>Graupel</value></data>
+  <data name="MetarWeatherSnow" xml:space="preserve"><value>Schnee</value></data>
+  <data name="MetarWeatherThunderstorm" xml:space="preserve"><value>Gewitter</value></data>
+  <data name="MetarWind" xml:space="preserve"><value>Wind: {0}</value></data>
+  <data name="MetarWindDirection" xml:space="preserve"><value>aus {0}°</value></data>
+  <data name="MetarWindValue" xml:space="preserve"><value>{0} mit {1} kt</value></data>
+  <data name="MetarWindVariable" xml:space="preserve"><value>variable Richtung</value></data>
+  <data name="MetarWindWithGusts" xml:space="preserve"><value>{0}, Böen bis {1} kt</value></data>
+  <data name="TafAmended" xml:space="preserve"><value>geändert</value></data>
+  <data name="TafCancelled" xml:space="preserve"><value>TAF {0} ist aufgehoben.</value></data>
+  <data name="TafCavok" xml:space="preserve"><value>CAVOK</value></data>
+  <data name="TafChangeKindBase" xml:space="preserve"><value>Ausgangsvorhersage</value></data>
+  <data name="TafChangeKindBecoming" xml:space="preserve"><value>Übergang</value></data>
+  <data name="TafChangeKindFrom" xml:space="preserve"><value>Ab</value></data>
+  <data name="TafChangeKindProbability" xml:space="preserve"><value>Wahrscheinlichkeit</value></data>
+  <data name="TafChangeKindProbabilityTemporary" xml:space="preserve"><value>Wahrscheinlichkeit, zeitweise</value></data>
+  <data name="TafChangeKindTemporary" xml:space="preserve"><value>Zeitweise</value></data>
+  <data name="TafCloudLayer" xml:space="preserve"><value>{0} in {1:N0} ft AGL {2}</value></data>
+  <data name="TafCloudsUnavailable" xml:space="preserve"><value>Wolken nicht codiert</value></data>
+  <data name="TafConditionsSeeRaw" xml:space="preserve"><value>Siehe dekodierte Änderungszeitleiste und Rohmeldung.</value></data>
+  <data name="TafCorrected" xml:space="preserve"><value>korrigiert</value></data>
+  <data name="TafGroupBase" xml:space="preserve"><value>Ausgangslage</value></data>
+  <data name="TafGroupBecoming" xml:space="preserve"><value>Übergang im Zeitraum {0}</value></data>
+  <data name="TafGroupFrom" xml:space="preserve"><value>Ab {0}</value></data>
+  <data name="TafGroupProbability" xml:space="preserve"><value>{0}% Wahrscheinlichkeit im Zeitraum {1}</value></data>
+  <data name="TafGroupProbabilityTemporary" xml:space="preserve"><value>{0}% Wahrscheinlichkeit zeitweiliger Bedingungen im Zeitraum {1}</value></data>
+  <data name="TafGroupTemporary" xml:space="preserve"><value>Zeitweise im Zeitraum {0}</value></data>
+  <data name="TafHeader" xml:space="preserve"><value>TAF {0}; Ausgabe {1}; Gültigkeit {2}</value></data>
+  <data name="TafNoMatchingInformation" xml:space="preserve"><value>Keine passende Vorhersageinformation ist codiert.</value></data>
+  <data name="TafNoSignificantCloud" xml:space="preserve"><value>keine signifikante tiefe Bewölkung</value></data>
+  <data name="TafNoSignificantWeather" xml:space="preserve"><value>kein signifikantes Wetter</value></data>
+  <data name="TafPressureNotEncoded" xml:space="preserve"><value>QNH ist nicht Bestandteil der unterstützten allgemeinen TAF-Bedingungsgruppen.</value></data>
+  <data name="TafTemperatureNotEncoded" xml:space="preserve"><value>Temperaturvorhersagen sind nicht Bestandteil der unterstützten allgemeinen TAF-Bedingungsgruppen.</value></data>
+  <data name="TafVisibilityAtLeast" xml:space="preserve"><value>Sicht mindestens 10 km</value></data>
+  <data name="TafVisibilityMeters" xml:space="preserve"><value>Sicht {0:N0} m</value></data>
+  <data name="TafVisibilityUnavailable" xml:space="preserve"><value>Sicht nicht codiert</value></data>
+  <data name="TafWeatherCodes" xml:space="preserve"><value>Wettercodes {0}</value></data>
+  <data name="TafWeatherNone" xml:space="preserve"><value>keine Wettererscheinung codiert</value></data>
+  <data name="TafWindDirection" xml:space="preserve"><value>aus {0}°</value></data>
+  <data name="TafWindGusts" xml:space="preserve"><value>{0}, Böen bis {1} kt</value></data>
+  <data name="TafWindUnavailable" xml:space="preserve"><value>Wind nicht codiert</value></data>
+  <data name="TafWindValue" xml:space="preserve"><value>{0} mit {1} kt</value></data>
+  <data name="TafWindVariable" xml:space="preserve"><value>variable Richtung</value></data>
+  <data name="WeatherProductMetar" xml:space="preserve"><value>METAR</value></data>
+  <data name="WeatherProductTaf" xml:space="preserve"><value>TAF</value></data>
 </root>
