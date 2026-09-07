@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AgentActionGetMetar" xml:space="preserve"><value>Aktuelles METAR abrufen</value></data>
+  <data name="AgentActionGetTaf" xml:space="preserve"><value>TAF-Vorhersage abrufen</value></data>
+  <data name="AgentActionGetMetarAndTaf" xml:space="preserve"><value>METAR und TAF abrufen</value></data>
+  <data name="AgentActionExplainPreviousResult" xml:space="preserve"><value>Vorheriges Ergebnis erklären</value></data>
+  <data name="AgentActionFilterPreviousResult" xml:space="preserve"><value>Vorheriges Ergebnis filtern</value></data>
+  <data name="AgentActionUnsupportedOperationalDecision" xml:space="preserve"><value>Operative Entscheidung nicht unterstützt</value></data>
+  <data name="AgentActionUnknown" xml:space="preserve"><value>Unbekannte Anfrage</value></data>
+  <data name="AgentFocusFull" xml:space="preserve"><value>Gesamtübersicht</value></data>
+  <data name="AgentFocusWind" xml:space="preserve"><value>Wind und Böen</value></data>
+  <data name="AgentFocusVisibility" xml:space="preserve"><value>Sichtweite</value></data>
+  <data name="AgentFocusClouds" xml:space="preserve"><value>Bewölkung</value></data>
+  <data name="AgentFocusWeather" xml:space="preserve"><value>Wettererscheinungen</value></data>
+  <data name="AgentFocusTemperature" xml:space="preserve"><value>Temperatur und Taupunkt</value></data>
+  <data name="AgentFocusPressure" xml:space="preserve"><value>Luftdruck</value></data>
+  <data name="AgentFocusValidity" xml:space="preserve"><value>Ausgabezeit und Gültigkeit</value></data>
+  <data name="AgentFocusChanges" xml:space="preserve"><value>Änderungen und Entwicklung</value></data>
+  <data name="AgentFocusWorstConditions" xml:space="preserve"><value>Ungünstigste Bedingungen</value></data>
+  <data name="AgentFocusNone" xml:space="preserve"><value>Kein Schwerpunkt</value></data>
+</root>

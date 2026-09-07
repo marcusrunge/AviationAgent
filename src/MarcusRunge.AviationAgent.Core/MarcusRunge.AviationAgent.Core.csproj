@@ -1,1 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><RootNamespace>MarcusRunge.AviationAgent.Core</RootNamespace></PropertyGroup></Project>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>MarcusRunge.AviationAgent.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MarcusRunge.Toolbox.Localization.Core" />
+  </ItemGroup>  
+</Project>

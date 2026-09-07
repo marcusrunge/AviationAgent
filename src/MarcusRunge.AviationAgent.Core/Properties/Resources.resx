@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AgentActionGetMetar" xml:space="preserve"><value>Retrieve current METAR</value></data>
+  <data name="AgentActionGetTaf" xml:space="preserve"><value>Retrieve TAF forecast</value></data>
+  <data name="AgentActionGetMetarAndTaf" xml:space="preserve"><value>Retrieve METAR and TAF</value></data>
+  <data name="AgentActionExplainPreviousResult" xml:space="preserve"><value>Explain previous result</value></data>
+  <data name="AgentActionFilterPreviousResult" xml:space="preserve"><value>Filter previous result</value></data>
+  <data name="AgentActionUnsupportedOperationalDecision" xml:space="preserve"><value>Operational decision not supported</value></data>
+  <data name="AgentActionUnknown" xml:space="preserve"><value>Unknown request</value></data>
+  <data name="AgentFocusFull" xml:space="preserve"><value>Full overview</value></data>
+  <data name="AgentFocusWind" xml:space="preserve"><value>Wind and gusts</value></data>
+  <data name="AgentFocusVisibility" xml:space="preserve"><value>Visibility</value></data>
+  <data name="AgentFocusClouds" xml:space="preserve"><value>Clouds</value></data>
+  <data name="AgentFocusWeather" xml:space="preserve"><value>Weather phenomena</value></data>
+  <data name="AgentFocusTemperature" xml:space="preserve"><value>Temperature and dew point</value></data>
+  <data name="AgentFocusPressure" xml:space="preserve"><value>Pressure</value></data>
+  <data name="AgentFocusValidity" xml:space="preserve"><value>Issue time and validity</value></data>
+  <data name="AgentFocusChanges" xml:space="preserve"><value>Changes and development</value></data>
+  <data name="AgentFocusWorstConditions" xml:space="preserve"><value>Worst conditions</value></data>
+  <data name="AgentFocusNone" xml:space="preserve"><value>No focus</value></data>
+</root>

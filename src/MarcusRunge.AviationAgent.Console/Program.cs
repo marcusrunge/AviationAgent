@@ -6,14 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML.OnnxRuntimeGenAI;
 
 using OgaHandle ogaHandle = new();
-
 IConfiguration configuration = new ConfigurationBuilder().SetBasePath(AppContext.BaseDirectory).AddJsonFile("appsettings.json", optional: false).Build();
-
-OnnxRuntimeAgentModelOptions options = configuration.GetRequiredSection("LocalAgentModel").Get<OnnxRuntimeAgentModelOptions>() ?? throw new InvalidOperationException("LocalAgentModel configuration is missing.");
-options = new OnnxRuntimeAgentModelOptions
+OnnxRuntimeAgentModelOptions configuredOptions = configuration.GetRequiredSection("LocalAgentModel").Get<OnnxRuntimeAgentModelOptions>() ?? throw new InvalidOperationException("LocalAgentModel configuration is missing.");
+OnnxRuntimeAgentModelOptions options = new()
 {
-    ModelDirectory = Path.IsPathRooted(options.ModelDirectory) ? options.ModelDirectory : Path.Combine(AppContext.BaseDirectory, options.ModelDirectory),
-    MaximumOutputTokens = options.MaximumOutputTokens,
+    ModelDirectory = Path.IsPathRooted(configuredOptions.ModelDirectory) ? configuredOptions.ModelDirectory : Path.Combine(AppContext.BaseDirectory, configuredOptions.ModelDirectory),
+    MaximumOutputTokens = configuredOptions.MaximumOutputTokens,
 };
 
 ServiceCollection services = new();
@@ -31,7 +29,7 @@ while (true)
     try
     {
         AgentDecision decision = await model.DecideAsync(input, CancellationToken.None);
-        Console.WriteLine($"Decision: action={decision.Action}, station={decision.Station ?? "null"}, focus={decision.Focus}");
+        Console.WriteLine($"Decision: action={decision.Action.ToWireValue()}, station={decision.Station ?? "null"}, focus={decision.Focus.ToWireValue()}");
     }
     catch (Exception exception) when (exception is InvalidDataException or JsonException)
     {
