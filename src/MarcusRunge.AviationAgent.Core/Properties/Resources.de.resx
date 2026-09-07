@@ -22,4 +22,6 @@
   <data name="AgentFocusChanges" xml:space="preserve"><value>Änderungen und Entwicklung</value></data>
   <data name="AgentFocusWorstConditions" xml:space="preserve"><value>Ungünstigste Bedingungen</value></data>
   <data name="AgentFocusNone" xml:space="preserve"><value>Kein Schwerpunkt</value></data>
+  <data name="WeatherProductMetar" xml:space="preserve"><value>METAR</value></data>
+  <data name="WeatherProductTaf" xml:space="preserve"><value>TAF</value></data>
 </root>
