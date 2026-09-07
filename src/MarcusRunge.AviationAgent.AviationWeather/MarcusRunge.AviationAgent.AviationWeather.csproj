@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>MarcusRunge.AviationAgent.AviationWeather</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
+  </ItemGroup>
+</Project>

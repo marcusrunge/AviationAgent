@@ -1,27 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup><OutputType>Exe</OutputType><RootNamespace>MarcusRunge.AviationAgent.ConsoleApp</RootNamespace></PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="../MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
-    <ProjectReference Include="../MarcusRunge.AviationAgent.OnnxRuntime/MarcusRunge.AviationAgent.OnnxRuntime.csproj" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
-  </ItemGroup>
-  <ItemGroup><None Update="appsettings.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\agent_contract_v2.txt">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\aviation_agent_metadata.json">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\chat_template.jinja">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\genai_config.json">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\model.onnx">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\model.onnx.data">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\tokenizer.json">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None><None Update="Models\aviation-agent-qwen2.5-0.5b-v2-fp32-cpu\tokenizer_config.json">
-  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None></ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MarcusRunge.AviationAgent.ConsoleApp</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="../MarcusRunge.AviationAgent.AviationWeather/MarcusRunge.AviationAgent.AviationWeather.csproj" />
+		<ProjectReference Include="../MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
+		<ProjectReference Include="../MarcusRunge.AviationAgent.OnnxRuntime/MarcusRunge.AviationAgent.OnnxRuntime.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 </Project>
