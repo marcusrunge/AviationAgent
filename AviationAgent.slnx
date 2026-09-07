@@ -1,9 +1,19 @@
 <Solution>
+  <Folder Name="/Projektmappenelemente/">
+    <File Path="AviationAgent_DE.pptx" />
+    <File Path="Copy-Model.ps1" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="LICENSE" />
+    <File Path="NOTICE" />
+    <File Path="README.md" />
+    <File Path="THIRD-PARTY-NOTICES.md" />
+  </Folder>
   <Folder Name="/src/">
-    <Project Path="src/MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
-    <Project Path="src/MarcusRunge.AviationAgent.OnnxRuntime/MarcusRunge.AviationAgent.OnnxRuntime.csproj" />
     <Project Path="src/MarcusRunge.AviationAgent.AviationWeather/MarcusRunge.AviationAgent.AviationWeather.csproj" />
     <Project Path="src/MarcusRunge.AviationAgent.Console/MarcusRunge.AviationAgent.Console.csproj" />
+    <Project Path="src/MarcusRunge.AviationAgent.Core/MarcusRunge.AviationAgent.Core.csproj" />
+    <Project Path="src/MarcusRunge.AviationAgent.OnnxRuntime/MarcusRunge.AviationAgent.OnnxRuntime.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/MarcusRunge.AviationAgent.Tests/MarcusRunge.AviationAgent.Tests.csproj" />
