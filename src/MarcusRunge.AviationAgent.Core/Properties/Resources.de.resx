@@ -95,6 +95,10 @@
   <data name="TafVisibilityUnavailable" xml:space="preserve"><value>Sicht nicht codiert</value></data>
   <data name="TafWeatherCodes" xml:space="preserve"><value>Wettercodes {0}</value></data>
   <data name="TafWeatherNone" xml:space="preserve"><value>keine Wettererscheinung codiert</value></data>
+  <data name="TafWeatherRainShowers" xml:space="preserve"><value>Regenschauer</value></data>
+  <data name="TafWeatherSnowShowers" xml:space="preserve"><value>Schneeschauer</value></data>
+  <data name="TafWeatherThunderstormWithRain" xml:space="preserve"><value>Gewitter mit Regen</value></data>
+  <data name="TafWeatherThunderstormWithSnow" xml:space="preserve"><value>Gewitter mit Schnee</value></data>
   <data name="TafWindDirection" xml:space="preserve"><value>aus {0}°</value></data>
   <data name="TafWindGusts" xml:space="preserve"><value>{0}, Böen bis {1} kt</value></data>
   <data name="TafWindUnavailable" xml:space="preserve"><value>Wind nicht codiert</value></data>

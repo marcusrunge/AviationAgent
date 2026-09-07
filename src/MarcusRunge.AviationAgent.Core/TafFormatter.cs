@@ -7,6 +7,19 @@ namespace MarcusRunge.AviationAgent.Core;
 /// <summary>Formats a decoded TAF as a timeline and never derives an operational decision.</summary>
 public static class TafFormatter
 {
+    private static readonly IReadOnlyDictionary<string, string> CloudAmountResourceKeys = new Dictionary<string, string>(StringComparer.Ordinal)
+    {
+        ["FEW"] = "MetarCloudAmountFEW",
+        ["SCT"] = "MetarCloudAmountSCT",
+        ["BKN"] = "MetarCloudAmountBKN",
+        ["OVC"] = "MetarCloudAmountOVC",
+        ["VV"] = "MetarCloudAmountVV",
+        ["NSC"] = "MetarCloudAmountNSC",
+        ["NCD"] = "MetarCloudAmountNCD",
+        ["SKC"] = "MetarCloudAmountSKC",
+        ["CLR"] = "MetarCloudAmountCLR",
+    };
+
     public static string Format(DecodedTaf taf, AgentFocus focus, CultureInfo culture)
     {
         ArgumentNullException.ThrowIfNull(taf);
@@ -76,7 +89,23 @@ public static class TafFormatter
 
     private static string FormatVisibility(TafConditions conditions, CultureInfo culture) => conditions.IsCavok ? Get("TafCavok", culture) : conditions.VisibilityMeters >= 10_000 ? Get("TafVisibilityAtLeast", culture) : conditions.VisibilityMeters is null ? Get("TafVisibilityUnavailable", culture) : string.Format(culture, Get("TafVisibilityMeters", culture), conditions.VisibilityMeters);
     private static string FormatWeather(TafConditions conditions, CultureInfo culture) => conditions.IsCavok ? Get("TafNoSignificantWeather", culture) : conditions.WeatherPhenomena.Count == 0 ? Get("TafWeatherNone", culture) : string.Format(culture, Get("TafWeatherCodes", culture), string.Join(", ", conditions.WeatherPhenomena));
-    private static string FormatClouds(TafConditions conditions, CultureInfo culture) => conditions.IsCavok ? Get("TafNoSignificantCloud", culture) : conditions.CloudLayers.Count == 0 ? Get("TafCloudsUnavailable", culture) : string.Join(", ", conditions.CloudLayers.Select(layer => layer.BaseFeetAboveAerodrome is null ? layer.Amount : string.Format(culture, Get("TafCloudLayer", culture), layer.Amount, layer.BaseFeetAboveAerodrome, layer.CloudType ?? string.Empty).TrimEnd()));
+    private static string FormatClouds(TafConditions conditions, CultureInfo culture)
+    {
+        if (conditions.IsCavok) return Get("TafNoSignificantCloud", culture);
+        if (conditions.CloudLayers.Count == 0) return Get("TafCloudsUnavailable", culture);
+        return string.Join(", ", conditions.CloudLayers.Select(layer => FormatCloudLayer(layer, culture)));
+    }
+
+    private static string FormatCloudLayer(MetarCloudLayer layer, CultureInfo culture)
+    {
+        // METAR and TAF use the same cloud amount codes, so both formatters
+        // intentionally share the existing localized cloud descriptions.
+        string amount = CloudAmountResourceKeys.TryGetValue(layer.Amount, out string? resourceKey) ? Get(resourceKey, culture) : layer.Amount;
+        if (layer.BaseFeetAboveAerodrome is null) return amount;
+
+        string value = string.Format(culture, Get("MetarCloudLayer", culture), amount, layer.BaseFeetAboveAerodrome);
+        return layer.CloudType is null ? value : string.Format(culture, Get("MetarCloudLayerWithType", culture), value, layer.CloudType);
+    }
     private static string FormatPoint(TafTimePoint point) => $"{point.Day:00} {point.Hour:00}:{point.Minute:00} UTC";
     private static string FormatPeriod(TafPeriod period) => $"{FormatPoint(period.Start)} - {FormatPoint(period.End)}";
     private static string Get(string key, CultureInfo culture) => Resources.ResourceManager.GetString(key, culture) ?? $"[[{key}]]";
