@@ -24,4 +24,47 @@
   <data name="AgentFocusNone" xml:space="preserve"><value>Kein Schwerpunkt</value></data>
   <data name="WeatherProductMetar" xml:space="preserve"><value>METAR</value></data>
   <data name="WeatherProductTaf" xml:space="preserve"><value>TAF</value></data>
+  <data name="MetarStation" xml:space="preserve"><value>Station: {0}</value></data>
+  <data name="MetarObservationTime" xml:space="preserve"><value>Beobachtung: Tag {0:00} um {1:00}:{2:00} UTC</value></data>
+  <data name="MetarWind" xml:space="preserve"><value>Wind: {0}</value></data>
+  <data name="MetarWindVariable" xml:space="preserve"><value>variable Richtung</value></data>
+  <data name="MetarWindDirection" xml:space="preserve"><value>aus {0}°</value></data>
+  <data name="MetarWindValue" xml:space="preserve"><value>{0} mit {1} kt</value></data>
+  <data name="MetarWindWithGusts" xml:space="preserve"><value>{0}, Böen bis {1} kt</value></data>
+  <data name="MetarVisibility" xml:space="preserve"><value>Sicht: {0}</value></data>
+  <data name="MetarVisibilityCavok" xml:space="preserve"><value>CAVOK, mindestens 10 km ohne signifikantes Wetter oder tiefe Bewölkung</value></data>
+  <data name="MetarVisibilityAtLeastTenKilometers" xml:space="preserve"><value>mindestens 10 km</value></data>
+  <data name="MetarVisibilityMeters" xml:space="preserve"><value>{0:N0} m</value></data>
+  <data name="MetarWeather" xml:space="preserve"><value>Wetter: {0}</value></data>
+  <data name="MetarWeatherNone" xml:space="preserve"><value>kein gemeldetes signifikantes Wetter</value></data>
+  <data name="MetarWeatherLight" xml:space="preserve"><value>leicht</value></data>
+  <data name="MetarWeatherHeavy" xml:space="preserve"><value>stark</value></data>
+  <data name="MetarWeatherRain" xml:space="preserve"><value>Regen</value></data>
+  <data name="MetarWeatherSnow" xml:space="preserve"><value>Schnee</value></data>
+  <data name="MetarWeatherDrizzle" xml:space="preserve"><value>Nieselregen</value></data>
+  <data name="MetarWeatherMist" xml:space="preserve"><value>feuchter Dunst</value></data>
+  <data name="MetarWeatherFog" xml:space="preserve"><value>Nebel</value></data>
+  <data name="MetarWeatherThunderstorm" xml:space="preserve"><value>Gewitter</value></data>
+  <data name="MetarWeatherHail" xml:space="preserve"><value>Hagel</value></data>
+  <data name="MetarWeatherSmallHail" xml:space="preserve"><value>Graupel</value></data>
+  <data name="MetarWeatherHaze" xml:space="preserve"><value>trockener Dunst</value></data>
+  <data name="MetarClouds" xml:space="preserve"><value>Wolken: {0}</value></data>
+  <data name="MetarCloudsUnavailable" xml:space="preserve"><value>nicht gemeldet</value></data>
+  <data name="MetarCloudLayer" xml:space="preserve"><value>{0} in {1:N0} ft AGL</value></data>
+  <data name="MetarCloudLayerWithType" xml:space="preserve"><value>{0}, Typ {1}</value></data>
+  <data name="MetarCloudAmountFEW" xml:space="preserve"><value>gering bewölkt</value></data>
+  <data name="MetarCloudAmountSCT" xml:space="preserve"><value>aufgelockert</value></data>
+  <data name="MetarCloudAmountBKN" xml:space="preserve"><value>durchbrochen</value></data>
+  <data name="MetarCloudAmountOVC" xml:space="preserve"><value>bedeckt</value></data>
+  <data name="MetarCloudAmountVV" xml:space="preserve"><value>Vertikalsicht</value></data>
+  <data name="MetarCloudAmountNSC" xml:space="preserve"><value>keine signifikanten Wolken</value></data>
+  <data name="MetarCloudAmountNCD" xml:space="preserve"><value>keine Wolken erkannt</value></data>
+  <data name="MetarCloudAmountSKC" xml:space="preserve"><value>wolkenlos</value></data>
+  <data name="MetarCloudAmountCLR" xml:space="preserve"><value>klar</value></data>
+  <data name="MetarTemperature" xml:space="preserve"><value>Temperatur: {0}; Taupunkt: {1}</value></data>
+  <data name="MetarDegreesCelsius" xml:space="preserve"><value>{0} °C</value></data>
+  <data name="MetarPressure" xml:space="preserve"><value>QNH: {0}</value></data>
+  <data name="MetarPressureHectopascals" xml:space="preserve"><value>{0} hPa</value></data>
+  <data name="MetarValueUnavailable" xml:space="preserve"><value>nicht verfügbar</value></data>
+  <data name="MetarNoChangeInformation" xml:space="preserve"><value>Aus der dekodierten METAR-Meldung werden keine Änderungsinformationen abgeleitet.</value></data>
 </root>
