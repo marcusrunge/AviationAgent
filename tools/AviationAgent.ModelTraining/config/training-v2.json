@@ -1,0 +1,16 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "train_file": "data/train-v2.jsonl",
+  "validation_file": "data/validation-v2.jsonl",
+  "adapter_output": "models/adapters/aviation-agent-qwen2.5-0.5b-v2",
+  "merged_output": "models/merged/aviation-agent-qwen2.5-0.5b-v2",
+  "seed": 42,
+  "max_length": 512,
+  "epochs": 8,
+  "learning_rate": 0.0002,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05
+}

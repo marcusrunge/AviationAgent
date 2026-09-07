@@ -1,0 +1,18 @@
+# Python training and export artifacts
+/tools/AviationAgent.ModelTraining/.venv/
+/tools/AviationAgent.ModelTraining/.venv-export/
+/tools/AviationAgent.ModelTraining/.cache/
+/tools/AviationAgent.ModelTraining/models/
+/tools/AviationAgent.ModelTraining/reports/
+/tools/AviationAgent.ModelTraining/data/train-v2.jsonl
+/tools/AviationAgent.ModelTraining/data/validation-v2.jsonl
+/tools/AviationAgent.ModelTraining/**/__pycache__/
+/tools/AviationAgent.ModelTraining/.pytest_cache/
+
+# Local model copies
+/src/MarcusRunge.AviationAgent.Console/Models/
+
+# Build and test artifacts
+**/bin/
+**/obj/
+/TestResults/

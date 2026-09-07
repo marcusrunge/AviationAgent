@@ -1,0 +1,10 @@
+.venv/
+.venv-export/
+.cache/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+data/train-v2.jsonl
+data/validation-v2.jsonl
+models/
+reports/

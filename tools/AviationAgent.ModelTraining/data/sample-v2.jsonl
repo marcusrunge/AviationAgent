@@ -1,0 +1,4 @@
+{"user":"METAR von ETHS","assistant":"{\"action\":\"get_metar\",\"station\":\"ETHS\",\"focus\":\"full\"}"}
+{"user":"TAF ETHS. Schwerpunkt: Wind und Böen.","assistant":"{\"action\":\"get_taf\",\"station\":\"ETHS\",\"focus\":\"wind\"}"}
+{"user":"Zeige Beobachtung und Prognose für EDDF.","assistant":"{\"action\":\"get_metar_and_taf\",\"station\":\"EDDF\",\"focus\":\"full\"}"}
+{"user":"Wie ist das Wetter?","assistant":"{\"action\":\"unknown\",\"station\":null,\"focus\":\"none\"}"}

@@ -1,0 +1,9 @@
+AviationAgent
+Copyright 2026 Marcus Runge
+
+The local routing model is derived from Qwen/Qwen2.5-0.5B-Instruct.
+Qwen2.5-0.5B is published under the Apache License, Version 2.0.
+
+Model weights, private training data, adapters, merged checkpoints, ONNX files,
+virtual environments, caches, and generated reports are not part of this source package.
+Third-party libraries and services retain their respective licenses and terms.
