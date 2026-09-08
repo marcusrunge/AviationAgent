@@ -1,11 +1,12 @@
-using System.Globalization;
-using System.Text.Json;
 using MarcusRunge.AviationAgent.AviationWeather;
 using MarcusRunge.AviationAgent.Core;
 using MarcusRunge.AviationAgent.OnnxRuntime;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML.OnnxRuntimeGenAI;
+using System.Globalization;
+using System.Text;
+using System.Text.Json;
 
 using OgaHandle ogaHandle = new();
 using CancellationTokenSource applicationCancellationTokenSource = new();
@@ -71,6 +72,7 @@ static CultureInfo CreateOutputCulture(IConfiguration configuration)
 
 static async Task RunAsync(ILocalAgentModel model, AgentDecisionRouter router, IAviationWeatherReportFormatter formatter, CultureInfo outputCulture, CancellationToken cancellationToken)
 {
+    Console.OutputEncoding = Encoding.UTF8;
     Console.WriteLine("Local Aviation Agent V2");
     Console.WriteLine("Enter an empty line to exit. Press Ctrl+C to cancel.");
     Console.WriteLine();
@@ -78,14 +80,36 @@ static async Task RunAsync(ILocalAgentModel model, AgentDecisionRouter router, I
     while (!cancellationToken.IsCancellationRequested)
     {
         Console.Write("Request: ");
+
         string? input = Console.ReadLine();
-        if (string.IsNullOrWhiteSpace(input)) return;
+
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            return;
+        }
 
         try
         {
-            AgentDecision decision = await model.DecideAsync(input, cancellationToken);
+            AgentDecision decision;
+
+            using (new ConsoleSpinner("Analyzing request"))
+            {
+                decision = await model.DecideAsync(input, cancellationToken);
+            }
+
+            Console.WriteLine();
+
             PrintDecision(decision);
-            AgentRouteResult routeResult = await router.RouteAsync(decision, cancellationToken);
+
+            AgentRouteResult routeResult;
+
+            using (new ConsoleSpinner("Fetching weather"))
+            {
+                routeResult = await router.RouteAsync(decision, cancellationToken);
+            }
+
+            Console.WriteLine();
+
             PrintReports(routeResult, formatter, outputCulture);
         }
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
@@ -94,13 +118,23 @@ static async Task RunAsync(ILocalAgentModel model, AgentDecisionRouter router, I
             Console.WriteLine("The operation was cancelled.");
             return;
         }
-        catch (AviationWeatherClientException exception) { PrintWeatherError(exception); }
-        catch (InvalidDataException exception) { Console.WriteLine($"The weather or model data was rejected: {exception.Message}"); }
-        catch (JsonException exception) { Console.WriteLine($"The model returned invalid JSON: {exception.Message}"); }
+        catch (AviationWeatherClientException exception)
+        {
+            PrintWeatherError(exception);
+        }
+        catch (InvalidDataException exception)
+        {
+            Console.WriteLine($"The weather or model data was rejected: {exception.Message}");
+        }
+        catch (JsonException exception)
+        {
+            Console.WriteLine($"The model returned invalid JSON: {exception.Message}");
+        }
 
         Console.WriteLine();
     }
 }
+
 
 static void PrintDecision(AgentDecision decision) => Console.WriteLine($"Decision: action={decision.Action.ToWireValue()}, station={decision.Station ?? "null"}, focus={decision.Focus.ToWireValue()}");
 
